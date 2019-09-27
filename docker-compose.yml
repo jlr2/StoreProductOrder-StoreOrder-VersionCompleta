@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  mongodb:
+    image: bitnami/mongodb:latest
+    container_name: mongodb_store-order
+    ports:
+      - "27017:27017"
+
+  sccs:
+    build: ../sccs/
+    container_name: sccs
+    ports: 
+      - "8088:8088"
